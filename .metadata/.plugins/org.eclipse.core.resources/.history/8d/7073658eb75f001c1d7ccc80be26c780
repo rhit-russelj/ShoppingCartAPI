@@ -4,8 +4,8 @@ import java.io.IOException;
 public class Response {
 	public static void writeFile(String[] args) {
 	    try {
-	      FileWriter myWriter = new FileWriter("ServerData.TXT");
-	      myWriter.write("item,Tire,car tire,100.00,tire.png,5");
+	      FileWriter myWriter = new FileWriter("filename.txt");
+	      myWriter.write("Files in Java might be tricky, but it is fun enough!");
 	      myWriter.close();
 	      System.out.println("Successfully wrote to the file.");
 	    } catch (IOException e) {
