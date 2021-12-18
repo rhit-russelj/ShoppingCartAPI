@@ -20,16 +20,12 @@ public class MainRunner {
 		for(int i = 0; i < items.size(); i++) {
 			System.out.println(items.get(i).getName());
 		}
-		
 		Scanner inputS = new Scanner(System.in);
-		
 		while(true) {
 			String cmd = inputS.nextLine();
-			
 			if(cmd.toLowerCase().equals("exit")) {
 				break;
 			}
-			
 			checkCommand(cmd);
 		}
 		
@@ -37,7 +33,6 @@ public class MainRunner {
 	}
 	
 	private static void checkCommand(String command) {
-		
 		command = command.toLowerCase();
 		if(command.equals("coupon")) {
 			handleCouponCommand();
@@ -60,12 +55,9 @@ public class MainRunner {
 	
 	private static void handleStockCheckCommand() {
 		Scanner itemInput = new Scanner(System.in);
-		
 		System.out.print("Item to check: ");
-		
 		String item = itemInput.nextLine();
 		item = item.toLowerCase();
-		
 		boolean flag = false;
 		
 		for(int i = 0; i < items.size(); i++) {
@@ -75,7 +67,6 @@ public class MainRunner {
 				break;
 			}
 		}
-		
 		if(!flag) {
 			System.out.println("Could not find item to check!");
 		}
@@ -83,9 +74,7 @@ public class MainRunner {
 	
 	private static void handleRemoveItem() {
 		Scanner itemInput = new Scanner(System.in);
-		
 		System.out.print("Item to remove: ");
-		
 		String item = itemInput.nextLine();
 		item = item.toLowerCase();
 		
@@ -96,18 +85,14 @@ public class MainRunner {
 				System.out.println("Amount in stock: " + items.get(i).getStock());
 				System.out.print("How many to remove?: ");
 				int amt = itemInput.nextInt();
-				
 				int amtToRemove = 0;
 				if(amt <= amtAvailable) {
 					amtToRemove = amt;
 				} else {
 					amtToRemove = amtAvailable;
 				}
-				
 				cart.removeItem(items.get(i), amtToRemove);
-				
 				items.get(i).setStock(items.get(i).getStock() + amtToRemove);
-				
 				System.out.println("Removed " + amtToRemove + " " + items.get(i).getName() + "(s)!");
 			}
 		}
@@ -115,12 +100,9 @@ public class MainRunner {
 	
 	private static void handleStateCommand() {
 		Scanner stateInput = new Scanner(System.in);
-		
 		System.out.print("Your State: ");
-		
 		String yourState = stateInput.nextLine();
 		yourState = yourState.toLowerCase();
-		
 		boolean flag = false;
 		
 		for(int i = 0; i < stateName.size(); i++) {
@@ -143,12 +125,9 @@ public class MainRunner {
 	
 	private static void handleAddItem() {
 		Scanner itemInput = new Scanner(System.in);
-		
 		System.out.print("Item to add: ");
-		
 		String itemToAdd = itemInput.nextLine();
 		itemToAdd = itemToAdd.toLowerCase();
-		
 		boolean flag = false;
 		
 		for(int i = 0; i < items.size(); i++) {
@@ -192,11 +171,8 @@ public class MainRunner {
 	
 	private static void handleCouponCommand() {
 		Scanner couponInput = new Scanner(System.in);
-		
 		System.out.print("Coupon code: ");
-		
 		String code = couponInput.nextLine();
-		
 		boolean flag = false;
 		
 		for(int i = 0; i < coupons.size(); i++) {
@@ -220,7 +196,6 @@ public class MainRunner {
 			while(readFile.hasNextLine()) {
 				String line = readFile.nextLine();
 				line = line.toLowerCase();
-				
 				String[] splitLine = line.split(",");
 				
 				if(splitLine[0].equals("item")) {
