@@ -1,0 +1,2 @@
+Fan,Box Fan,3.50,FanPic.png,3
+Leash,Leash for dogs,1.25,DogWithLeash.jpg,5

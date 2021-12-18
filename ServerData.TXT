@@ -1,0 +1,7 @@
+item,Fan,Box Fan,3.50,FanPic.png,3
+item,Leash,Leash for dogs,1.25,DogWithLeash.jpg,5
+coupon,abx10,0.20
+coupon,heart101,0.50
+salestax,IN,0.07
+salestax,IL,0.06250
+salestax,FL,0.06

@@ -19,4 +19,16 @@ public class Item {
 		return this.name;
 	}
 	
+	public double getPrice() {
+		return this.price;
+	}
+	
+	public int getStock() {
+		return this.stock;
+	}
+	
+	public void setStock(int amt) {
+		this.stock = amt;
+	}
+	
 }
