@@ -1,0 +1,14 @@
+/Cart.class
+/Coupon.class
+/Item.class
+/MainRunner.class
+/Request.class
+/Response.class
+/Total.class
+/.classpath
+/.gitignore
+/.project
+/ServerData.TXT
+/ServerDataCoupons.TXT
+/ServerDataItems.TXT
+/ServerDataSalesTax.TXT
